@@ -36,18 +36,19 @@ void RocketLayer::draw(){
 
 void RocketLayer::LoadFonts(const char* directory)
 {
-	//Rocket::Core::String font_names[4];
-	//font_names[0] = "Delicious-Roman.otf";
-	//font_names[1] = "Delicious-Italic.otf";
-	//font_names[2] = "Delicious-Bold.otf";
-	//font_names[3] = "Delicious-BoldItalic.otf";
+	//Notice:Those otf files are copied from the exapmle.
+	rocket::core::string font_names[4];
+	font_names[0] = "delicious-roman.otf";
+	font_names[1] = "delicious-italic.otf";
+	font_names[2] = "delicious-bold.otf";
+	font_names[3] = "delicious-bolditalic.otf";
 
-	//for (int i = 0; i < sizeof(font_names) / sizeof(Rocket::Core::String); i++)
-	//{
-	//	Rocket::Core::FontDatabase::LoadFontFace(Rocket::Core::String(directory) + font_names[i]);
-	//}
+	for (int i = 0; i < sizeof(font_names) / sizeof(rocket::core::string); i++)
+	{
+		rocket::core::fontdatabase::loadfontface(rocket::core::string(directory) + font_names[i]);
+	}
 
-	Rocket::Core::String font_name = "simhei.ttf";
-	Rocket::Core::FontDatabase::LoadFontFace(Rocket::Core::String(directory) + font_name,"Vifnt",Rocket::Core::Font::STYLE_NORMAL,
-		Rocket::Core::Font::WEIGHT_BOLD);
+	// Rocket::Core::String font_name = "simhei.ttf";
+	// Rocket::Core::FontDatabase::LoadFontFace(Rocket::Core::String(directory) + font_name,"Vifnt",Rocket::Core::Font::STYLE_NORMAL,
+		// Rocket::Core::Font::WEIGHT_BOLD);
 }

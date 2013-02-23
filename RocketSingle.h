@@ -41,6 +41,7 @@ public:
 //RocketSingle* RocketSingle::m_RocketSingle = NULL;
 #include "Inventory.h"
 
+//Notice:It's not neccery to be a CCSprite here, just use cclayer as you wish.
 class RocketLayer : public CCSprite
 {
 public:

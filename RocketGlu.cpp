@@ -15,6 +15,8 @@ typedef enum
 	ROCKETGLUE_UNIFORM_TRANSLATION = 0,
 } ROCKETGLUE_UNIFORM;
 
+//Notice:Those shaders are neccerry, they are not for testing use.
+
 static const char RocketGlueFragmentTextureShader[] = " \
 													  precision mediump float; \
 													  varying vec2 v_texCoord; \
@@ -176,7 +178,7 @@ void CocoRenderInterface::RenderGeometry(Rocket::Core::Vertex* vertices, int num
     if(texture) glUseProgram(program_texture_id);
     else glUseProgram(program_color_id);
 	
-	glDisable(GL_DEPTH_TEST);
+	glDisable(GL_DEPTH_TEST);		//Notice:This is neccery for cocos2d-x if you have some detpth test enabled nodes, or you just donot want the rocket layer always on the top.
 
 	cocos2d::CCSize rvp = cocos2d::CCDirector::sharedDirector()->getVisibleSize();
 

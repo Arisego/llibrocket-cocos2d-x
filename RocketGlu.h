@@ -6,6 +6,8 @@
 #include <Rocket/Debugger.h>
 #include "cocos2d.h"
 
+//Notice:Please handle input to rocket yourself, cause the control system may differ from each game disign.
+
 class CocoSystemInterface : public Rocket::Core::SystemInterface
 {
 private:
